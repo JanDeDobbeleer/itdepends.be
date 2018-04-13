@@ -1,0 +1,12 @@
+/*
+  X-XSS-Protection: 1
+  x-frame-options: SAMEORIGIN
+  content-security-policy: default-src 'self' 'unsafe-inline' *.itdepends.be *.netlify.com fonts.gstatic.com maxcdn.bootstrapcdn.com fonts.googleapis.com cdnjs.cloudflare.com use.fontawesome.com;
+  X-Welcome-Stanger: Hi there, welcome to my personal page, make sure to follow me!
+  X-GitHub-Location: https://github.com/jandedobbeleer
+  X-StackOverflow-Location: https://www.stackoverflow.com/users/5122929/jan
+  X-Keybase-Location: https://keybase.io/jandedobbeleer
+  X-Twitter-Location: https://twitter.com/jandedobbeleer
+  X-Facebook-Location: https://www.facebook.com/janjoris
+  X-LinkedIn-Location: https://www.linkedin.com/in/jandedobbeleer
+  X-Instagram-Location: https://instagram.com/jandedobbeleer
