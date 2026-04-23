@@ -522,7 +522,10 @@
 
     /* CTA */
     .cta {
-      background: linear-gradient(45deg, var(--primary), var(--primary-container));
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 45%, #2b7082 55%, var(--tertiary) 100%);
+      background-size: 300% 300%;
+      will-change: background-position;
+      animation: gradientBreathe 12s ease infinite;
       color: var(--on-primary);
       padding: 64px 0;
     }
@@ -577,6 +580,76 @@
     .stagger > *:nth-child(4) { animation-delay: 0.22s; }
     .stagger > *:nth-child(5) { animation-delay: 0.28s; }
     .stagger > *:nth-child(6) { animation-delay: 0.34s; }
+
+    /* ─── Scroll Reveal ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      will-change: opacity, transform;
+      transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* Accent bars animate in when parent is revealed */
+    .reveal.block::before,
+    .reveal.timeline-item::before,
+    .reveal.proof-card::before {
+      transform: scaleY(0);
+      transform-origin: top center;
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.2s;
+    }
+    .block.is-visible::before,
+    .timeline-item.is-visible::before,
+    .proof-card.is-visible::before { transform: scaleY(1); }
+
+    /* Nav link underline slide */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 12px;
+      right: 12px;
+      height: 1.5px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+    }
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    /* Photo frame: entrance + subtle float */
+    @keyframes floatPhoto {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .photo-frame {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both,
+                 floatPhoto 7s ease-in-out 1.5s infinite;
+    }
+
+    /* Hero grid drift */
+    @keyframes gridDrift {
+      from { background-position: 0 0; }
+      to { background-position: 24px 24px; }
+    }
+    .hero::before { animation: gridDrift 20s linear infinite; }
+
+    /* CTA gradient breathe */
+    @keyframes gradientBreathe {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+      .reveal.block::before,
+      .reveal.timeline-item::before,
+      .reveal.proof-card::before { transform: scaleY(1); transition: none; }
+      .photo-frame { animation: none; }
+      .hero::before { animation: none; }
+      .cta { animation: none !important; }
+    }
 
     /* Responsive */
     @media (max-width: 960px) {
@@ -863,6 +936,64 @@
       <p>Built with care using <a href="https://github.com/janjoris/itdepends.be" target="_blank"><i class="fa fa-github"></i> Open Source</a>. Domain managed by <a href="https://cloudz.be" target="_blank">Cloudz</a>.</p>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* Add .reveal to simple single-element targets */
+    ['.section-head', '.usp-statement', '.usp-list', '.cta-title', '.cta-text'].forEach(function (sel) {
+      document.querySelectorAll(sel).forEach(function (el) { el.classList.add('reveal'); });
+    });
+
+    /* Add .reveal + stagger delays to children of grid/timeline containers */
+    ['.grid--4', '.grid--3', '.timeline'].forEach(function (parentSel) {
+      document.querySelectorAll(parentSel).forEach(function (parent) {
+        Array.from(parent.children).forEach(function (child, i) {
+          child.classList.add('reveal');
+          if (i > 0) child.style.transitionDelay = (Math.min(i, 4) * 0.09) + 's';
+        });
+      });
+    });
+
+    /* USP list: slight delay after statement */
+    var uspList = document.querySelector('.usp-list');
+    if (uspList) uspList.style.transitionDelay = '0.14s';
+
+    /* CTA button */
+    var ctaBtn = document.querySelector('.cta .btn--primary');
+    if (ctaBtn) { ctaBtn.classList.add('reveal'); ctaBtn.style.transitionDelay = '0.24s'; }
+
+    /* CTA text: slight delay */
+    var ctaText = document.querySelector('.cta-text');
+    if (ctaText) ctaText.style.transitionDelay = '0.12s';
+
+    var allReveal = document.querySelectorAll('.reveal');
+
+    /* Reduced motion or no IntersectionObserver: show everything immediately */
+    if (
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+      !('IntersectionObserver' in window)
+    ) {
+      allReveal.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+    );
+
+    allReveal.forEach(function (el) { observer.observe(el); });
+  })();
+  </script>
 
 </body>
 </html>
