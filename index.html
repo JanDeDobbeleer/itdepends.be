@@ -1,612 +1,868 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Engineering Leader & Open Source Innovator - Tailored solutions for software lifecycle challenges">
+  <meta name="description" content="Engineering excellence grounded in modern, evolving practices for platforms, delivery, and teams.">
   <meta name="author" content="Jan De Dobbeleer">
-  <!--Twitter card-->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@jandedobbeleer" />
-  <meta name="twitter:creator" content="@jandedobbeleer" />
-  <meta name="twitter:title" content="Jan De Dobbeleer - IT depends" />
-  <meta name="twitter:description" content="Engineering Leader & Open Source Innovator - Tailored solutions for software lifecycle challenges" />
-  <meta property="og:site_name" content="IT depends" />
-  <!--Facebook-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jandedobbeleer">
+  <meta name="twitter:creator" content="@jandedobbeleer">
+  <meta name="twitter:title" content="Jan De Dobbeleer - IT depends">
+  <meta name="twitter:description" content="Engineering excellence grounded in modern, evolving practices for platforms, delivery, and teams.">
+  <meta property="og:site_name" content="IT depends">
   <meta property="og:image:width" content="279">
   <meta property="og:image:height" content="279">
   <meta property="og:title" content="Jan De Dobbeleer - IT depends">
-  <meta property="og:description" content="Engineering Leader & Open Source Innovator - Tailored solutions for software lifecycle challenges">
+  <meta property="og:description" content="Engineering excellence grounded in modern, evolving practices for platforms, delivery, and teams.">
   <meta property="og:url" content="https://itdepends.be">
   <meta property="og:image" content="https://itdepends.be/img/profile.jpg">
-  <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="manifest" href="img/site.webmanifest">
-  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#3b6e80">
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#1e5667">
   <link rel="shortcut icon" href="img/favicon.ico">
   <meta name="apple-mobile-web-app-title" content="IT depends">
   <meta name="application-name" content="IT depends">
   <meta name="msapplication-TileColor" content="#2d89ef">
   <meta name="msapplication-config" content="img/browserconfig.xml">
-  <meta name="theme-color" content="#3b6e80">
-  <title>Jan De Dobbeleer - Engineering Leader & Open Source Innovator</title>
-
-  <!-- Modern Fonts -->
+  <meta name="theme-color" content="#1e5667">
+  <title>Jan De Dobbeleer - Engineering Excellence &amp; Platform Strategy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://use.fontawesome.com/84297a2096.js"></script>
-
-  <!-- Custom CSS -->
   <style>
     :root {
-      --primary-color: #3a6e80;
-      --primary-gradient: linear-gradient(135deg, #3a6e80 0%, #5a8a96 100%);
-      --text-color: #2c3e50;
-      --text-light: #6c757d;
-      --bg-light: #f8f9fa;
-      --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
-      --border-radius: 16px;
+      --primary: #1e5667;
+      --primary-container: #3a6e80;
+      --primary-fixed-dim: #2a6474;
+      --secondary-container: #cfe2f9;
+      --tertiary: #235661;
+      --surface: #f7f9ff;
+      --surface-low: #edf4ff;
+      --surface-mid: #e5eefb;
+      --surface-high: #dbe7f6;
+      --surface-highest: #cddced;
+      --surface-lowest: #ffffff;
+      --outline: #c0c8cc;
+      --on-surface: #091d2e;
+      --on-primary: #f7fbff;
+      --muted: #4f6374;
+      --ghost: rgba(192, 200, 204, 0.15);
+      --grid: rgba(192, 200, 204, 0.05);
+      --shadow-ambient: 0 32px 64px rgba(9, 29, 46, 0.06);
+      --shadow-soft: 0 16px 40px rgba(9, 29, 46, 0.07);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--on-surface);
+      background: var(--surface);
       line-height: 1.6;
-      color: var(--text-color);
-      background: var(--primary-gradient);
-      min-height: 100vh;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
 
-    .container-wrapper {
+    a { color: inherit; }
+
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    .wrap {
       max-width: 1200px;
-      margin: 20px auto;
-      background: white;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
+      margin: 0 auto;
+      padding: 0 48px;
     }
 
-    /* Header Section */
-    .hero-section {
-      background: var(--primary-gradient);
-      color: white;
-      padding: 60px 40px;
+    /* Navigation - Glassmorphism */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(205, 220, 237, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      outline: 1px solid var(--ghost);
+    }
+
+    @supports not (backdrop-filter: blur(1px)) {
+      .site-nav { background: var(--surface-high); }
+    }
+
+    .site-nav .wrap {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 40px;
-      position: relative;
-      overflow: hidden;
+      height: 56px;
     }
 
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: float 20s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      50% { transform: translate(-20px, -20px) rotate(180deg); }
-    }
-
-    .profile-section {
-      flex-shrink: 0;
-      z-index: 2;
-    }
-
-    .profile-picture {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 4px solid rgba(255, 255, 255, 0.3);
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .profile-picture:hover {
-      transform: scale(1.05);
-    }
-
-    .profile-picture img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero-content {
-      flex: 1;
-      z-index: 2;
-    }
-
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      font-family: "Space Grotesk", "Inter", sans-serif;
-      margin-bottom: 10px;
-      background: linear-gradient(45deg, #fff, #f0f8ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-subtitle {
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 400;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .contact-link {
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 25px;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(10px);
+    .nav-brand {
       display: flex;
       align-items: center;
       gap: 8px;
-    }
-
-    .contact-link:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px);
-      color: white;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       text-decoration: none;
     }
 
-    /* Main Content */
-    .main-content {
-      padding: 60px 40px;
+    .nav-brand img {
+      width: 22px;
+      height: 22px;
+      display: block;
     }
 
-    .section {
-      margin-bottom: 60px;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
+
+    .nav-link {
+      text-decoration: none;
+      font-size: 0.875rem;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    .nav-link:hover { background: rgba(30, 86, 103, 0.06); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn--primary {
+      background: linear-gradient(45deg, var(--primary), var(--primary-container));
+      color: var(--on-primary);
+    }
+
+    .btn--primary:hover { filter: brightness(1.1); }
+
+    .btn--ghost {
+      color: var(--primary);
+      outline: 1px solid var(--ghost);
+      background: transparent;
+    }
+
+    .btn--sm { padding: 8px 16px; font-size: 0.85rem; }
+
+    /* Chips */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--secondary-container);
+      border-radius: 2px;
+      font-size: 0.82rem;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+
+    .chip:hover { transform: translateY(-1px); }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: var(--surface-low);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+        linear-gradient(180deg, var(--grid) 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 85% 25%, rgba(30, 86, 103, 0.14), transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 56px;
+      padding-top: 88px;
+      padding-bottom: 88px;
+    }
+
+    .hero-text { padding-left: 40px; }
+
+    .kicker {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .hero-name {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .hero-tagline {
+      font-size: 1.3rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-intro {
+      max-width: 480px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .photo-frame {
+      background: var(--surface-mid);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+      outline: 1px solid var(--ghost);
+      align-self: start;
+      margin-top: 24px;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .photo-stats {
+      margin-top: 16px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--primary);
+    }
+
+    .stat-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Sections */
+    .section { padding: 80px 0; }
+    .section--low { background: var(--surface-low); }
+
+    .section-head { margin-bottom: 40px; }
 
     .section-title {
-      font-size: 2.5rem;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2rem;
       font-weight: 600;
-      font-family: "Space Grotesk", "Inter", sans-serif;
-      color: var(--text-color);
-      margin-bottom: 40px;
-      text-align: center;
+      letter-spacing: -0.01em;
+    }
+
+    .section-lede {
+      margin-top: 8px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .section-link {
+      font-size: 0.82rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .section-link:hover { text-decoration: underline; }
+
+    /* Grids */
+    .grid { display: grid; gap: 24px; }
+    .grid--2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+    .grid--3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid--4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+    /* Content Blocks - cardless with accent bar */
+    .block {
       position: relative;
+      padding-left: 16px;
     }
 
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 4px;
-      background: var(--primary-gradient);
-      margin: 20px auto 0;
-      border-radius: 2px;
+    .block::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--tertiary);
     }
 
-    /* Philosophy Section */
-    .philosophy {
-      text-align: center;
-      padding: 40px;
-      background: var(--bg-light);
-      border-radius: var(--border-radius);
-      margin-bottom: 60px;
-    }
-
-    .philosophy blockquote {
+    .block-icon {
       font-size: 1.4rem;
-      font-style: italic;
-      color: var(--text-color);
-      margin: 0;
-      line-height: 1.8;
+      color: var(--tertiary);
+      margin-bottom: 8px;
     }
 
-    /* Grid Layouts */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    /* Cards */
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-      border: 1px solid #f0f0f0;
-      transition: all 0.3s ease;
-      text-align: center;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .card-icon {
-      font-size: 3rem;
-      color: var(--primary-color);
-      margin-bottom: 20px;
-    }
-
-    .card-title {
-      font-size: 1.3rem;
+    .block-title {
+      font-size: 1.1rem;
       font-weight: 600;
-      margin-bottom: 15px;
-      color: var(--text-color);
+      margin-bottom: 6px;
     }
 
-    .card-text {
-      color: var(--text-light);
-      line-height: 1.6;
+    .block-text {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
-    /* Achievement Cards */
-    .achievement-card {
-      background: white;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--primary-color);
-      transition: all 0.3s ease;
+    .block-list {
+      list-style: none;
+      display: grid;
+      gap: 6px;
     }
 
-    .achievement-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
+    .block-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
-    .achievement-title {
-      font-size: 1.4rem;
+    .block-list li::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background: var(--tertiary);
+      border-radius: 50%;
+      margin-top: 9px;
+      flex-shrink: 0;
+    }
+
+    /* USP row - asymmetric */
+    .usp-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .usp-statement {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      max-width: 460px;
+    }
+
+    .usp-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .usp-list li {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .usp-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      background: var(--tertiary);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .usp-list strong { font-weight: 600; }
+
+    /* Timeline */
+    .timeline { display: grid; gap: 0; }
+
+    .timeline-item {
+      position: relative;
+      padding: 20px 0 20px 16px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: var(--tertiary);
+    }
+
+    .timeline-role { font-weight: 600; }
+    .timeline-company { color: var(--muted); font-weight: 500; }
+
+    .timeline-dates {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .timeline-note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 4px;
+    }
+
+    /* Proof cards - tonal lift on surface */
+    .proof-card {
+      background: var(--surface-mid);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+      outline: 1px solid var(--ghost);
+      position: relative;
+      display: grid;
+      gap: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .proof-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .proof-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 16px;
+      bottom: 16px;
+      width: 2px;
+      background: var(--tertiary);
+    }
+
+    .proof-title { font-size: 1.15rem; font-weight: 600; }
+    .proof-title a { text-decoration: none; color: inherit; }
+    .proof-text { color: var(--muted); font-size: 0.95rem; }
+
+    .proof-badge {
+      display: inline-flex;
+      padding: 6px 12px;
+      background: var(--secondary-container);
+      border-radius: 4px;
+      font-size: 0.82rem;
       font-weight: 600;
-      color: var(--text-color);
-      margin-bottom: 10px;
+      color: var(--tertiary);
     }
 
-    .achievement-highlight {
-      background: linear-gradient(135deg, var(--primary-color), #5a8a96);
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      display: inline-block;
-      margin: 10px 0;
-    }
-
-    .achievement-tags {
-      margin-top: 15px;
-      font-size: 0.85rem;
-      color: var(--primary-color);
+    .proof-tags {
+      font-size: 0.82rem;
+      color: var(--primary);
       font-weight: 500;
     }
 
-    /* CTA Section */
-    .cta-section {
-      background: var(--primary-gradient);
-      color: white;
-      padding: 60px 40px;
-      text-align: center;
-      border-radius: var(--border-radius);
-      margin: 60px 0;
+    /* CTA */
+    .cta {
+      background: linear-gradient(45deg, var(--primary), var(--primary-container));
+      color: var(--on-primary);
+      padding: 64px 0;
     }
+
+    .cta .wrap { text-align: center; }
 
     .cta-title {
-      font-size: 2.5rem;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2.2rem;
       font-weight: 600;
-      margin-bottom: 20px;
-      font-family: "Space Grotesk", "Inter", sans-serif;
+      margin-bottom: 12px;
     }
 
-    .cta-button {
-      display: inline-block;
-      padding: 15px 30px;
-      background: white;
-      color: var(--primary-color);
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      margin-top: 20px;
+    .cta-text {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      margin-bottom: 24px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      color: var(--primary-color);
-      text-decoration: none;
+    .cta .btn--primary {
+      background: var(--surface-lowest);
+      color: var(--primary);
     }
+
+    .cta .btn--primary:hover { filter: brightness(0.97); }
 
     /* Footer */
-    .footer {
-      background: #2c3e50;
-      color: white;
-      padding: 40px;
+    .site-footer {
+      background: var(--surface-high);
+      padding: 28px 0;
       text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
     }
 
-    .footer a {
-      color: #74b9ff;
-      text-decoration: none;
+    .site-footer a { color: var(--primary); text-decoration: none; }
+    .site-footer a:hover { color: var(--on-surface); }
+
+    /* Entrance animation */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .footer a:hover {
-      color: white;
+    .stagger > * { animation: fadeUp 0.5s ease both; }
+    .stagger > *:nth-child(1) { animation-delay: 0.04s; }
+    .stagger > *:nth-child(2) { animation-delay: 0.1s; }
+    .stagger > *:nth-child(3) { animation-delay: 0.16s; }
+    .stagger > *:nth-child(4) { animation-delay: 0.22s; }
+    .stagger > *:nth-child(5) { animation-delay: 0.28s; }
+    .stagger > *:nth-child(6) { animation-delay: 0.34s; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero .wrap { grid-template-columns: 1fr; }
+      .hero-text { padding-left: 0; }
+      .photo-frame { max-width: 300px; margin-top: 0; }
+      .usp-row { grid-template-columns: 1fr; gap: 32px; }
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .container-wrapper {
-        margin: 10px;
-      }
-
-      .hero-section {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 20px;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.2rem;
-      }
-
-      .main-content {
-        padding: 40px 20px;
-      }
-
-      .section-title {
-        font-size: 2rem;
-      }
-
-      .contact-links {
-        justify-content: center;
-      }
-
-      .cta-section {
-        padding: 40px 20px;
-      }
-
-      .cta-title {
-        font-size: 2rem;
-      }
+    @media (max-width: 640px) {
+      .wrap { padding: 0 20px; }
+      .hero .wrap { padding-top: 56px; padding-bottom: 56px; }
+      .hero-name { font-size: 2.4rem; }
+      .section { padding: 56px 0; }
+      .section-title { font-size: 1.7rem; }
+      .nav-links .nav-link { display: none; }
+      .grid--4 { grid-template-columns: 1fr 1fr; }
+      .grid--3, .grid--2 { grid-template-columns: 1fr; }
+      .cta { padding: 48px 0; }
+      .cta-title { font-size: 1.8rem; }
     }
   </style>
+</head>
 <body>
-  <div class="container-wrapper">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="profile-section">
-        <div class="profile-picture">
-          <img src="img/profile.jpg" alt="Jan De Dobbeleer">
+
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="#" class="nav-brand"><img src="img/favicon-32x32.png" alt="">IT depends</a>
+      <nav class="nav-links">
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#engagements" class="nav-link">Engagements</a>
+        <a href="#proof" class="nav-link">Proof</a>
+        <a href="mailto:jan@itdepends.be" class="btn btn--ghost btn--sm">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-text stagger">
+          <span class="kicker">Engineering Excellence</span>
+          <h1 class="hero-name">Jan De Dobbeleer</h1>
+          <p class="hero-tagline">Modern practices for platforms, delivery, and teams.</p>
+          <p class="hero-intro">
+            I help product organizations raise engineering standards, modernize platforms, and build teams that ship reliably. Practical excellence that keeps improving with the craft.
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:jan@itdepends.be" class="btn btn--primary">Start a conversation</a>
+            <a href="#engagements" class="btn btn--ghost">Explore engagements</a>
+          </div>
+          <div class="hero-links">
+            <a href="mailto:jan@itdepends.be" class="chip"><i class="fa fa-envelope"></i> jan@itdepends.be</a>
+            <a href="https://resume.itdepends.be" target="_blank" class="chip"><i class="fa fa-file-text-o"></i> Resume</a>
+            <a href="https://github.com/jandedobbeleer" target="_blank" class="chip"><i class="fa fa-github"></i> GitHub</a>
+            <a href="https://twitter.com/jandedobbeleer" target="_blank" class="chip"><i class="fa fa-twitter"></i> @jandedobbeleer</a>
+            <a href="https://blog.itdepends.be" target="_blank" class="chip"><i class="fa fa-rss"></i> Blog</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-content">
-        <h1 class="hero-title">Jan De Dobbeleer</h1>
-        <h2 class="hero-subtitle">Engineering Leader & Open Source Innovator</h2>
-        <div class="contact-links">
-          <a href="mailto:jan@itdepends.be" class="contact-link">
-            <i class="fa fa-envelope"></i>
-            jan@itdepends.be
-          </a>
-          <a href="https://github.com/jandedobbeleer" target="_blank" class="contact-link">
-            <i class="fa fa-github"></i>
-            GitHub Star
-          </a>
-          <a href="https://twitter.com/jandedobbeleer" target="_blank" class="contact-link">
-            <i class="fa fa-twitter"></i>
-            @jandedobbeleer
-          </a>
-          <a href="https://blog.itdepends.be" target="_blank" class="contact-link">
-            <i class="fa fa-rss"></i>
-            Blog
-          </a>
+        <div class="photo-frame">
+          <img src="img/profile.jpg" alt="Jan De Dobbeleer">
+          <div class="photo-stats">
+            <div class="stat">
+              <span class="stat-label">Teams led</span>
+              <span class="stat-value">70+ engineers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Portfolio</span>
+              <span class="stat-value">EUR 2M+ scope</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Open source</span>
+              <span class="stat-value">1M+ downloads/month</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Recognition</span>
+              <span class="stat-value">GitHub Star, MS MVP</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <!-- Philosophy Section -->
-      <section class="philosophy">
-        <blockquote>
-          "From precision watchmaking to platform engineering—I believe in crafting solutions with the same attention to detail that luxury timepieces demand. The answer to any technical challenge? Well, it depends."
-        </blockquote>
-      </section>
+    <section class="section" id="message">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Why it matters</span>
+          <h2 class="section-title">Engineering excellence that keeps evolving</h2>
+        </div>
+        <div class="usp-row">
+          <p class="usp-statement">
+            Clear standards, measurable delivery gains, and a platform roadmap that reduces risk. I work alongside leaders and teams to install modern practices and keep them current.
+          </p>
+          <ul class="usp-list">
+            <li><strong>Modern practice first.</strong> Continuous delivery, reliability, and developer experience.</li>
+            <li><strong>Platform discipline.</strong> Clean interfaces, ownership boundaries, and operational readiness.</li>
+            <li><strong>Leadership at scale.</strong> Hiring, coaching, and organization design for growth.</li>
+            <li><strong>Builder credibility.</strong> Open source products used by developers every day.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <!-- Services -->
-      <section class="section">
-        <h2 class="section-title">What I Deliver</h2>
-        <div class="grid-4">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fa fa-comment"></i>
-            </div>
-            <h3 class="card-title">Engineering Excellence Workshops</h3>
-            <p class="card-text">
-              Transform your engineering culture through hands-on workshops focused on craftsmanship principles and AI-native software engineering. Guide teams through the transformation to modern, intelligent development practices.
-            </p>
+    <section class="section section--low" id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Skills</span>
+          <h2 class="section-title">Focus areas</h2>
+          <p class="section-lede">Core skills shaped by platform leadership and product delivery.</p>
+        </div>
+        <div class="grid grid--4">
+          <div class="block">
+            <div class="block-icon"><i class="fa fa-bolt"></i></div>
+            <h3 class="block-title">Engineering Excellence</h3>
+            <ul class="block-list">
+              <li>Continuous delivery and release discipline</li>
+              <li>Code review, testing strategy, and quality gates</li>
+              <li>Developer experience and inner-source practices</li>
+            </ul>
           </div>
-
-          <div class="card">
-            <div class="card-icon">
-              <i class="fa fa-edit"></i>
-            </div>
-            <h3 class="card-title">Platform Transformation</h3>
-            <p class="card-text">
-              Modernize your infrastructure with a business oriented problem solving architecture and the relevant engineering practices. I'll help you establish CI/CD pipelines, automated testing strategies, and observability frameworks that accelerate delivery and reduce operational overhead.
-            </p>
+          <div class="block">
+            <div class="block-icon"><i class="fa fa-cubes"></i></div>
+            <h3 class="block-title">Platform Strategy</h3>
+            <ul class="block-list">
+              <li>Target state architecture and platform roadmaps</li>
+              <li>Cloud migration planning and risk management</li>
+              <li>Reliability, observability, and incident response</li>
+            </ul>
           </div>
-
-          <div class="card">
-            <div class="card-icon">
-              <i class="fa fa-child"></i>
-            </div>
-            <h3 class="card-title">Team Scaling & Organization</h3>
-            <p class="card-text">
-              Scale your engineering organization effectively through proven frameworks for hiring, onboarding, and team structure. I'll help you establish engineering standards, define career paths, and build a culture that attracts and retains top talent.
-            </p>
+          <div class="block">
+            <div class="block-icon"><i class="fa fa-users"></i></div>
+            <h3 class="block-title">Leadership at Scale</h3>
+            <ul class="block-list">
+              <li>Org design, hiring plans, and coaching</li>
+              <li>Operating model and delivery metrics</li>
+              <li>Cross-team alignment and stakeholder management</li>
+            </ul>
           </div>
-
-          <div class="card">
-            <div class="card-icon">
-              <i class="fa fa-certificate"></i>
-            </div>
-            <h3 class="card-title">Technical Strategy & Architecture</h3>
-            <p class="card-text">
-              Define your technical roadmap with strategic guidance on cloud architecture, multi-platform development, and open source adoption. From post-acquisition integration to DevOps transformation, I'll help align your technical decisions with business goals.
-            </p>
+          <div class="block">
+            <div class="block-icon"><i class="fa fa-code"></i></div>
+            <h3 class="block-title">Product and Community</h3>
+            <ul class="block-list">
+              <li>Open source product development and adoption</li>
+              <li>Technical workshops and enablement</li>
+              <li>AI-assisted workflows where they add value</li>
+            </ul>
           </div>
         </div>
-      </section>
+        <p style="margin-top: 24px;"><a href="https://resume.itdepends.be" target="_blank" class="section-link">Full resume &#8594;</a></p>
+      </div>
+    </section>
 
-      <!-- Way of Working -->
-      <section class="section">
-        <h2 class="section-title">My Approach</h2>
-        <div class="grid-4">
-          <div class="card">
-            <div class="card-icon">
-              <i class="fa fa-users"></i>
-            </div>
-            <h3 class="card-title">Craftsman's Precision</h3>
-            <p class="card-text">
-              My background in luxury watchmaking instilled precision and attention to detail. Every solution is crafted with the same meticulous care that luxury timepieces demand.
-            </p>
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Experience</span>
+          <h2 class="section-title">Leadership track record</h2>
+          <p class="section-lede">Recent roles with measurable platform and delivery impact.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-role">GitHub Delivery Lead</div>
+            <div class="timeline-company">KBC Bank and Verzekering</div>
+            <div class="timeline-dates">Nov 2025 - Present</div>
+            <div class="timeline-note">Leading GitHub platform strategy, developer tooling adoption, and DevOps practices.</div>
           </div>
-
-          <div class="card">
-            <div class="card-icon">
-              <i class="fa fa-truck"></i>
-            </div>
-            <h3 class="card-title">Proven Scale</h3>
-            <p class="card-text">
-              Led teams supporting millions of customers at NIKE EMEA, managed €2M+ portfolios at In The Pocket, and scaled organizations through acquisitions at TrendMiner/Software AG.
-            </p>
+          <div class="timeline-item">
+            <div class="timeline-role">Engineering Manager</div>
+            <div class="timeline-company">NIKE</div>
+            <div class="timeline-dates">Jun 2022 - Nov 2025</div>
+            <div class="timeline-note">Led 70+ engineers across five teams delivering platform services and running engineering workshops.</div>
           </div>
-
-          <div class="card">
-            <div class="card-icon">
-              <i class="fa fa-forward"></i>
-            </div>
-            <h3 class="card-title">Real-World Results</h3>
-            <p class="card-text">
-              Delivered measurable improvements: 300% deployment frequency increase, 60% lead time reduction, 98% client satisfaction rate, and built tools used by millions globally.
-            </p>
+          <div class="timeline-item">
+            <div class="timeline-role">Chief Technology Officer</div>
+            <div class="timeline-company">TrendMiner, Software AG</div>
+            <div class="timeline-dates">Apr 2021 - Jun 2022</div>
+            <div class="timeline-note">Drove cloud transformation and post-acquisition integration with a new cloud-native architecture.</div>
           </div>
-
-          <div class="card">
-            <div class="card-icon">
-              <i class="fa fa-handshake-o"></i>
-            </div>
-            <h3 class="card-title">Cross-Industry Experience</h3>
-            <p class="card-text">
-              From luxury goods to telecom, banking to aerospace, and now sportswear—I bring diverse industry perspective to solve complex engineering challenges.
-            </p>
+          <div class="timeline-item">
+            <div class="timeline-role">Engineering Manager</div>
+            <div class="timeline-company">TrendMiner</div>
+            <div class="timeline-dates">Jan 2021 - Mar 2021</div>
+            <div class="timeline-note">Improved deployment frequency by 300 percent and reduced lead time by 60 percent.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-role">Team Lead</div>
+            <div class="timeline-company">In The Pocket</div>
+            <div class="timeline-dates">Sep 2018 - Dec 2020</div>
+            <div class="timeline-note">Managed a EUR 2M+ portfolio with 98 percent client satisfaction for enterprise programs.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-role">Software Development Lead</div>
+            <div class="timeline-company">Unleashed</div>
+            <div class="timeline-dates">Jan 2018 - Sep 2018</div>
+            <div class="timeline-note">Scaled the engineering organization from 8 to 22 engineers across three product lines.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-role">Early Career and Craftsmanship</div>
+            <div class="timeline-company">Unleashed, Twipe, and luxury watchmaking</div>
+            <div class="timeline-dates">2007 - 2017</div>
+            <div class="timeline-note">Led mobile and API teams, built DevOps foundations, and developed precision craft as a certified watchmaker.</div>
           </div>
         </div>
-      </section>
+        <p style="margin-top: 24px;"><a href="https://resume.itdepends.be" target="_blank" class="section-link">Full resume &#8594;</a></p>
+      </div>
+    </section>
 
-      <!-- Key Achievements -->
-      <section class="section">
-        <h2 class="section-title">Proven Impact</h2>
-        <div class="grid-2">
-          <div class="achievement-card">
-            <h3 class="achievement-title">
-              <a href="https://ohmyposh.dev" target="_blank" style="color: inherit; text-decoration: none;">
-                Oh My Posh - Featured by Microsoft
-              </a>
-            </h3>
-            <p>Built the world's most popular cross-platform prompt theme engine. Featured in Microsoft keynotes, Windows Wednesday channel, and won Microsoft Store Award 2024 for Developer Tools.</p>
-            <div class="achievement-highlight">
-              🏆 Microsoft Store Award Winner 2024, 20k+ stars, 1M+ monthly downloads
-            </div>
-            <div class="achievement-tags">#microsoft-featured #developer-tools #open-source #go</div>
+    <section class="section section--low" id="engagements">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Engagements</span>
+          <h2 class="section-title">Where I plug in</h2>
+          <p class="section-lede">Choose a focused engagement or combine them.</p>
+        </div>
+        <div class="grid grid--4">
+          <div class="block">
+            <div class="block-icon"><i class="fa fa-line-chart"></i></div>
+            <h3 class="block-title">Engineering Excellence Workshops</h3>
+            <p class="block-text">Hands-on sessions on modern delivery, testing strategy, code review, and AI-assisted workflows where they add value.</p>
           </div>
-
-          <div class="achievement-card">
-            <h3 class="achievement-title">
-              NIKE EMEA Platform Leadership
-            </h3>
-            <p>Leading 70+ engineers across 5 teams delivering critical platform services supporting millions of customers. Driving digital transformation initiatives and conducting engineering workshops.</p>
-            <div class="achievement-highlight">
-              💼 70+ engineers managed, millions of customers served
-            </div>
-            <div class="achievement-tags">#platform-engineering #team-leadership #digital-transformation</div>
+          <div class="block">
+            <div class="block-icon"><i class="fa fa-sitemap"></i></div>
+            <h3 class="block-title">Platform Strategy</h3>
+            <p class="block-text">Architecture reviews, target state design, and migration plans with clear ownership and risk management.</p>
           </div>
-
-          <div class="achievement-card">
-            <h3 class="achievement-title">
-              <a href="https://stars.github.com/profiles/jandedobbeleer/" target="_blank" style="color: inherit; text-decoration: none;">
-                GitHub Star & Microsoft MVP
-              </a>
-            </h3>
-            <p>Dual recognition for technical excellence and community impact. GitHub Star (150 worldwide) for open source contributions and Microsoft MVP for cloud technology expertise.</p>
-            <div class="achievement-highlight">
-              🌟 Elite recognition from GitHub and Microsoft
-            </div>
-            <div class="achievement-tags">#github-star #microsoft-mvp #community-leadership</div>
+          <div class="block">
+            <div class="block-icon"><i class="fa fa-refresh"></i></div>
+            <h3 class="block-title">Delivery Systems</h3>
+            <p class="block-text">CI/CD, observability, incident response, and release discipline that increase throughput without chaos.</p>
+          </div>
+          <div class="block">
+            <div class="block-icon"><i class="fa fa-users"></i></div>
+            <h3 class="block-title">Team Leadership</h3>
+            <p class="block-text">Hiring plans, onboarding, growth paths, and org design that keep ownership clear as you scale.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Call to Action -->
-      <section class="cta-section">
-        <h2 class="cta-title">Ready to scale your engineering excellence?</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">
-          From startup to enterprise, across industries and acquisitions—I've scaled teams, transformed platforms, and delivered results that matter. Let's discuss your engineering challenges.
-        </p>
-        <a href="mailto:jan@itdepends.be" class="cta-button">
-          Let's talk engineering
-        </a>
-      </section>
+    <section class="section" id="proof">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Proof</span>
+          <h2 class="section-title">Work that speaks</h2>
+          <p class="section-lede">Results across open source, platform leadership, and community impact.</p>
+        </div>
+        <div class="grid grid--3">
+          <div class="proof-card">
+            <h3 class="proof-title"><a href="https://ohmyposh.dev" target="_blank">Oh My Posh</a></h3>
+            <p class="proof-text">Creator of a cross-platform prompt theme engine used by developers worldwide. Featured by Microsoft and winner of Microsoft Store Award 2024.</p>
+            <span class="proof-badge">Microsoft Store Award 2024, 20k+ stars, 1M+ downloads/month</span>
+            <span class="proof-tags">#open-source #developer-tools #go</span>
+          </div>
+          <div class="proof-card">
+            <h3 class="proof-title">NIKE EMEA Platform Leadership</h3>
+            <p class="proof-text">Led 70+ engineers across five teams building platform services that support millions of customers.</p>
+            <span class="proof-badge">70+ engineers, multi-team platform</span>
+            <span class="proof-tags">#platform-engineering #leadership #delivery</span>
+          </div>
+          <div class="proof-card">
+            <h3 class="proof-title"><a href="https://stars.github.com/profiles/jandedobbeleer/" target="_blank">GitHub Star and Microsoft MVP</a></h3>
+            <p class="proof-text">Recognized for open source impact and community leadership in developer tooling and cloud.</p>
+            <span class="proof-badge">GitHub Star, Microsoft MVP</span>
+            <span class="proof-tags">#open-source #community #developer-tools</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="cta-title">Ready to raise engineering standards?</h2>
+        <p class="cta-text">If you want modern practices that keep evolving and a platform that supports growth, let's talk.</p>
+        <a href="mailto:jan@itdepends.be" class="btn btn--primary">Start a conversation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Built with care using <a href="https://github.com/janjoris/itdepends.be" target="_blank"><i class="fa fa-github"></i> Open Source</a>. Domain managed by <a href="https://cloudz.be" target="_blank">Cloudz</a>.</p>
     </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>Made with ❤ using <a href="https://github.com/janjoris/itdepends.be" target="_blank"><i class="fa fa-github"></i> Open Source</a> and <a href="https://netlify.com" target="_blank">Netlify</a>. Domain managed by <a href="https://cloudz.be" target="_blank">Cloudz</a>.</p>
-    </footer>
-  </div>
 </body>
-
 </html>
