@@ -1,0 +1,113 @@
+# itdepends.be — Full Content
+
+> Jan De Dobbeleer — engineering leader, open source builder, and consultant helping product organisations raise engineering standards, modernise platforms, and build teams that ship reliably.
+
+## Jan De Dobbeleer
+
+Modern practices for platforms, delivery, and teams.
+
+I help product organisations raise engineering standards, modernise platforms, and build teams that ship reliably. Practical excellence that keeps improving with the craft.
+
+**Contact:** jan@itdepends.be
+**Resume:** https://resume.itdepends.be
+**GitHub:** https://github.com/jandedobbeleer
+**Twitter:** @jandedobbeleer
+**Blog:** https://blog.itdepends.be
+
+**Teams led:** 70+ engineers
+**Portfolio:** EUR 2M+ scope
+**Open source:** 1M+ downloads/month
+**Recognition:** GitHub Star, Microsoft MVP
+
+## Engineering excellence that keeps evolving
+
+Clear standards, measurable delivery gains, and a platform roadmap that reduces risk. I work alongside leaders and teams to install modern practices and keep them current.
+
+- **Modern practice first.** Continuous delivery, reliability, and developer experience.
+- **Platform discipline.** Clean interfaces, ownership boundaries, and operational readiness.
+- **Leadership at scale.** Hiring, coaching, and organisation design for growth.
+- **Builder credibility.** Open source products used by developers every day.
+
+## Focus areas
+
+### Engineering Excellence
+
+- Continuous delivery and release discipline
+- Code review, testing strategy, and quality gates
+- Developer experience and inner-source practices
+
+### Platform Strategy
+
+- Target state architecture and platform roadmaps
+- Cloud migration planning and risk management
+- Reliability, observability, and incident response
+
+### Leadership at Scale
+
+- Org design, hiring plans, and coaching
+- Operating model and delivery metrics
+- Cross-team alignment and stakeholder management
+
+### Product and Community
+
+- Open source product development and adoption
+- Technical workshops and enablement
+- AI-assisted workflows where they add value
+
+## Leadership track record
+
+Recent roles with measurable platform and delivery impact.
+
+**GitHub Delivery Lead — KBC Bank and Verzekering (Nov 2025 – Present)**
+Leading GitHub platform strategy, developer tooling adoption, and DevOps practices.
+
+**Engineering Manager — NIKE (Jun 2022 – Nov 2025)**
+Led 70+ engineers across five teams delivering platform services and running engineering workshops.
+
+**Chief Technology Officer — TrendMiner, Software AG (Apr 2021 – Jun 2022)**
+Drove cloud transformation and post-acquisition integration with a new cloud-native architecture.
+
+**Engineering Manager — TrendMiner (Jan 2021 – Mar 2021)**
+Improved deployment frequency by 300% and reduced lead time by 60%.
+
+**Team Lead — In The Pocket (Sep 2018 – Dec 2020)**
+Managed a EUR 2M+ portfolio with 98% client satisfaction for enterprise programs.
+
+**Software Development Lead — Unleashed (Jan 2018 – Sep 2018)**
+Scaled the engineering organisation from 8 to 22 engineers across three product lines.
+
+**Early Career and Craftsmanship — Unleashed, Twipe, and luxury watchmaking (2007–2017)**
+Led mobile and API teams, built DevOps foundations, and developed precision craft as a certified watchmaker.
+
+## Engagements
+
+Choose a focused engagement or combine them.
+
+### Engineering Excellence Workshops
+Hands-on sessions on modern delivery, testing strategy, code review, and AI-assisted workflows where they add value.
+
+### Platform Strategy
+Architecture reviews, target state design, and migration plans with clear ownership and risk management.
+
+### Delivery Systems
+CI/CD, observability, incident response, and release discipline that increase throughput without chaos.
+
+### Team Leadership
+Hiring plans, onboarding, growth paths, and org design that keep ownership clear as you scale.
+
+## Work that speaks
+
+### Oh My Posh (https://ohmyposh.dev)
+Creator of a cross-platform prompt theme engine used by developers worldwide. Featured by Microsoft and winner of Microsoft Store Award 2024. 20k+ stars, 1M+ downloads/month. #open-source #developer-tools #go
+
+### NIKE EMEA Platform Leadership
+Led 70+ engineers across five teams building platform services that support millions of customers. 70+ engineers, multi-team platform. #platform-engineering #leadership #delivery
+
+### GitHub Star and Microsoft MVP (https://stars.github.com/profiles/jandedobbeleer/)
+Recognised for open source impact and community leadership in developer tooling and cloud. #open-source #community #developer-tools
+
+## Contact
+
+Ready to raise engineering standards? If you want modern practices that keep evolving and a platform that supports growth, let's talk.
+
+Email: jan@itdepends.be
