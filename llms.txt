@@ -1,0 +1,34 @@
+# itdepends.be
+
+> Jan De Dobbeleer — engineering leader, open source builder, and consultant helping product organisations raise engineering standards, modernise platforms, and build teams that ship reliably.
+
+## About
+
+- [Homepage](https://itdepends.be/) — overview of Jan's background, focus areas, and engagements
+- [Resume](https://resume.itdepends.be) — full career history and skills
+- [Blog](https://blog.itdepends.be) — writing on engineering, platforms, and leadership
+- [GitHub](https://github.com/jandedobbeleer) — open source projects
+
+## Engagements
+
+Jan offers consulting in four areas:
+
+- **Engineering Excellence Workshops** — hands-on sessions on modern delivery, testing strategy, code review, and AI-assisted workflows
+- **Platform Strategy** — architecture reviews, target state design, and migration plans with clear ownership and risk management
+- **Delivery Systems** — CI/CD, observability, incident response, and release discipline that increase throughput without chaos
+- **Team Leadership** — hiring plans, onboarding, growth paths, and org design that keep ownership clear as you scale
+
+## Contact
+
+Email: jan@itdepends.be
+
+## Open Source
+
+- [Oh My Posh](https://ohmyposh.dev) — cross-platform terminal prompt theme engine, 20k+ GitHub stars, 1M+ downloads/month, Microsoft Store Award 2024
+
+## Example
+
+```bash
+# Reach Jan directly
+curl -s https://itdepends.be/llms.txt
+```
